@@ -1,5 +1,5 @@
-import fullList from './fullList/reducer';
+import list from './list/reducer';
 
 export default {
-  fullList,
+  list,
 };

@@ -1,0 +1,13 @@
+@import '~assets/styles/palette';
+@import '~assets/styles/mixins';
+
+.home_container {
+  display: flex;
+  gap: 20px;
+  justify-content: center;
+  height: 100%;
+  align-items: center;
+  @include tablet {
+    flex-direction: column;
+  }
+}

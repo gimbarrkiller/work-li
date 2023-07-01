@@ -1,0 +1,27 @@
+@import '~assets/styles/palette';
+@import '~assets/styles/mixins';
+
+.item_container {
+  width: 60%;
+  padding: 20px;
+  border: 1px solid $black;
+  height: 95vh;
+  overflow: auto;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  @include tablet {
+    width: 100%;
+  }
+}
+.item_container_content {
+  justify-content: left;
+
+}
+
+.item_container_text {
+  font: {
+    weight: 500;
+    size: 20px;
+  };
+}

@@ -1,0 +1,23 @@
+@import '~assets/styles/palette';
+@import '~assets/styles/mixins';
+
+.list_container {
+  width: 30%;
+  border: 1px solid $black;
+  height: 95vh;
+  overflow: auto;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  @include tablet {
+    width: 100%;
+  }
+}
+
+.list_container_loader {
+  align-items: center;
+}
+
+.btn_active {
+  background-color: $green;
+}

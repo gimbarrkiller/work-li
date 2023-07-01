@@ -1,8 +1,8 @@
 import { all } from 'redux-saga/effects';
-import { FullListEffects } from './fullList/sagas';
+import { listEffects } from './list/sagas';
 
 export default function* rootSaga() {
   yield all([
-    ...FullListEffects,
+    ...listEffects,
   ]);
 }

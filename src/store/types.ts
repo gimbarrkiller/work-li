@@ -1,5 +1,5 @@
-import { FullListState } from 'store/fullList/types';
+import { ListState } from 'store/list/types';
 
 export type ReduxState = {
-  fullList: FullListState,
+  list: ListState,
 };
