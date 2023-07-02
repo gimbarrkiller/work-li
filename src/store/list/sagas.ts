@@ -13,10 +13,7 @@ import {
 
 import { ListActionType } from './actionsTypes';
 import { ItemType } from './types';
-import {
-  GetItemInfo,
-  listSetState,
-} from './actionCreators';
+import { getItemInfo, listSetState } from './actionCreators';
 import { listSelectors } from './selectors';
 
 export function* getFullListSaga() {
@@ -44,7 +41,7 @@ export function* getItemDataSaga({
   payload: {
     idItem,
   },
-}: ReturnType<typeof GetItemInfo>) {
+}: ReturnType<typeof getItemInfo>) {
   try {
     yield put(listSetState({ activeItem: undefined }));
     const fullList: ItemType[] = yield select(listSelectors.getProp('fullList'));

@@ -1,4 +1,4 @@
-import { ListState } from 'store/list/types';
+import { ListState } from 'types';
 
 export type ReduxState = {
   list: ListState,

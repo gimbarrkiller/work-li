@@ -1,5 +1,6 @@
 import { ListState } from 'types';
 import { createReducer } from 'utils';
+
 import { listHandlers } from './handlers';
 
 export const listInitialState: Readonly<ListState> = {

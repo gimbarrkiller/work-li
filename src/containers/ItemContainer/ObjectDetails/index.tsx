@@ -2,23 +2,18 @@ import React, { FC } from 'react';
 import { ItemType } from 'types';
 import cn from 'classnames';
 
+import { dateFormat, isDate } from 'utils';
+
 import styles from './styles.module.scss';
-import { dateFormat } from '../../../utils';
 
 interface Props {
   object?: ItemType;
 }
-const isDate = (value: string): boolean => {
-  const dateRegex = /^\d{4}-\d{2}-\d{2}$/;
-  const dateTimeRegex = /^\d{4}-\d{2}-\d{2}T\d{2}:\d{2}:\d{2}(\.\d{3})?Z$/;
-
-  return dateRegex.test(value) || dateTimeRegex.test(value);
-};
 
 export const ObjectDetails: FC<Props> = ({ object }) => {
   /* eslint-disable @typescript-eslint/no-explicit-any */
   const formatValue = (value: any, depth: number) => {
-    if(value === null) {
+    if (value === null) {
       return '';
     }
     if (typeof value === 'object') {

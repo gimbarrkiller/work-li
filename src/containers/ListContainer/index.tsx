@@ -12,7 +12,8 @@ type ListContainerProps = {
   isLoadingFullList: boolean;
   activeId?: string;
 };
-const VirtualizedList: FC<Omit<ListContainerProps, 'isLoadingFullList'>> = ({ listId, onClick, activeId }) => {
+
+const VirtualizedList: FC<Omit<ListContainerProps, 'isLoadingFullList'>> = memo(({ listId, onClick, activeId }) => {
   const getItemSize = () => 40;
   const getHeightScreen = () => window.screen.availHeight * 0.95;
 
@@ -35,13 +36,13 @@ const VirtualizedList: FC<Omit<ListContainerProps, 'isLoadingFullList'>> = ({ li
     <VariableSizeList
       itemCount={listId.length}
       itemSize={getItemSize}
-      height={getHeightScreen()} // Высота контейнера списка
-      width="100%" // Ширина контейнера списка
+      height={getHeightScreen()}
+      width="100%"
     >
       {renderItem}
     </VariableSizeList>
   );
-};
+});
 
 export const ListContainer: FC<ListContainerProps> = memo(({
   onClick,

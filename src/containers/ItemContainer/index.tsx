@@ -1,7 +1,7 @@
 import React, { FC, memo } from 'react';
 import cn from 'classnames';
 
-import { ItemType } from 'store/list/types';
+import { ItemType } from 'types';
 
 import ObjectDetails from './ObjectDetails';
 

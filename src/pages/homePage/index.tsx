@@ -5,7 +5,7 @@ import React, {
 } from 'react';
 import { useDispatch, useSelector } from 'react-redux';
 
-import { GetFullList, GetItemInfo } from 'store/list/actionCreators';
+import { getFullList, getItemInfo } from 'store/list/actionCreators';
 import { listSelectors } from 'store/list/selectors';
 import { ListContainer, ItemContainer } from 'containers';
 
@@ -16,11 +16,11 @@ export const HomePage: FC = () => {
   const { listId, isLoadingFullList, activeItem } = useSelector(listSelectors.getState);
 
   useEffect(() => {
-    dispatch(GetFullList());
+    dispatch(getFullList());
   }, [dispatch]);
 
   const onClickItem = useCallback((id: string) => {
-    dispatch(GetItemInfo({ idItem: id }));
+    dispatch(getItemInfo({ idItem: id }));
   }, [dispatch]);
 
   return (
