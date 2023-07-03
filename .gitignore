@@ -1,4 +1,5 @@
 node_modules
+build
 .eslintcache
 yarn-error.log
 .idea
@@ -8,6 +9,7 @@ build# See https://help.github.com/articles/ignoring-files/ for more about ignor
 
 # dependencies
 /node_modules
+/build
 # misc
 .env.development.local
 
